@@ -31,19 +31,20 @@ CREATE TABLE `detai` (
   `MaDeTai` varchar(12) NOT NULL,
   `TenDeTai` varchar(250) NOT NULL,
   `NguoiHD` varchar(50) NOT NULL,
-  `ThoiGianDK` date NOT NULL
+  `ThoiGianDK` date NOT NULL,
+  `GioiHanSoLuongDK` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `detai`
 --
 
-INSERT INTO `detai` (`MaDeTai`, `TenDeTai`, `NguoiHD`, `ThoiGianDK`) VALUES
-('001', 'Khai thác loại hình “du lịch chậm” nhằm đáp ứng nhu cầu cho người cao tuổi tại quận 1, tp.HCM', 'Nguyen Van A', '2020-12-01'),
-('002', 'Vấn đề ô nhiễm môi trường đô thị và một số giải pháp ở khu đô thị mới', 'Nguyen Van A', '2020-12-01'),
-('003', 'Trang phục sức thời Lý- Trần qua tư liệu khảo cổ học', 'Nguyen Van B', '2020-12-02'),
-('004', 'Triết học về lòng biết ơn trong đạo lý “uống nước nhớ nguồn', 'Nguyen Van C', '2020-12-02'),
-('005', 'Đánh giá tác động của dịch bệnh Covid-19 đến sự tăng trưởng nền kinh tế Việt Nam', 'Nguyen Van C', '2020-12-02');
+INSERT INTO `detai` (`MaDeTai`, `TenDeTai`, `NguoiHD`, `ThoiGianDK`, `GioiHanSoLuongDK`) VALUES
+('001', 'Khai thác loại hình “du lịch chậm” nhằm đáp ứng nhu cầu cho người cao tuổi tại quận 1, tp.HCM', 'Nguyen Van A', '2020-12-01', 3),
+('002', 'Vấn đề ô nhiễm môi trường đô thị và một số giải pháp ở khu đô thị mới', 'Nguyen Van A', '2020-12-01', 3),
+('003', 'Trang phục sức thời Lý- Trần qua tư liệu khảo cổ học', 'Nguyen Van B', '2020-12-02', 3),
+('004', 'Triết học về lòng biết ơn trong đạo lý “uống nước nhớ nguồn', 'Nguyen Van C', '2020-12-02', 3),
+('005', 'Đánh giá tác động của dịch bệnh Covid-19 đến sự tăng trưởng nền kinh tế Việt Nam', 'Nguyen Van C', '2020-12-02', 3);
 
 -- --------------------------------------------------------
 
