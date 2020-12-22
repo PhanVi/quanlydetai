@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2020 at 04:52 PM
+-- Generation Time: Dec 22, 2020 at 05:38 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -32,19 +32,20 @@ CREATE TABLE `detai` (
   `TenDeTai` varchar(250) NOT NULL,
   `NguoiHD` varchar(50) NOT NULL,
   `ThoiGianDK` date NOT NULL,
-  `GioiHanSoLuongDK` int(11) NOT NULL
+  `GioiHanSoLuongDK` int(11) NOT NULL,
+  `SoLuongDK` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `detai`
 --
 
-INSERT INTO `detai` (`MaDeTai`, `TenDeTai`, `NguoiHD`, `ThoiGianDK`, `GioiHanSoLuongDK`) VALUES
-('001', 'Khai thác loại hình “du lịch chậm” nhằm đáp ứng nhu cầu cho người cao tuổi tại quận 1, tp.HCM', 'Nguyen Van A', '2020-12-01', 3),
-('002', 'Vấn đề ô nhiễm môi trường đô thị và một số giải pháp ở khu đô thị mới', 'Nguyen Van A', '2020-12-01', 3),
-('003', 'Trang phục sức thời Lý- Trần qua tư liệu khảo cổ học', 'Nguyen Van B', '2020-12-02', 3),
-('004', 'Triết học về lòng biết ơn trong đạo lý “uống nước nhớ nguồn', 'Nguyen Van C', '2020-12-02', 3),
-('005', 'Đánh giá tác động của dịch bệnh Covid-19 đến sự tăng trưởng nền kinh tế Việt Nam', 'Nguyen Van C', '2020-12-02', 3);
+INSERT INTO `detai` (`MaDeTai`, `TenDeTai`, `NguoiHD`, `ThoiGianDK`, `GioiHanSoLuongDK`, `SoLuongDK`) VALUES
+('001', 'Khai thác loại hình “du lịch chậm” nhằm đáp ứng nhu cầu cho người cao tuổi tại quận 1, tp.HCM', 'Nguyen Van A', '2020-12-01', 3, 0),
+('002', 'Vấn đề ô nhiễm môi trường đô thị và một số giải pháp ở khu đô thị mới', 'Nguyen Van A', '2020-12-01', 3, 0),
+('003', 'Trang phục sức thời Lý- Trần qua tư liệu khảo cổ học', 'Nguyen Van B', '2020-12-02', 3, 0),
+('004', 'Triết học về lòng biết ơn trong đạo lý “uống nước nhớ nguồn', 'Nguyen Van C', '2020-12-02', 3, 0),
+('005', 'Đánh giá tác động của dịch bệnh Covid-19 đến sự tăng trưởng nền kinh tế Việt Nam', 'Nguyen Van C', '2020-12-02', 3, 0);
 
 -- --------------------------------------------------------
 
