@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2020 at 05:38 PM
+-- Generation Time: Dec 24, 2020 at 03:48 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -24,13 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `EmailAdmin` varchar(50) NOT NULL,
+  `MatKhau` varchar(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`EmailAdmin`, `MatKhau`) VALUES
+('admin1@gmail.com', '123'),
+('admin2@gmail.com', '123');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `detai`
 --
 
 CREATE TABLE `detai` (
   `MaDeTai` varchar(12) NOT NULL,
   `TenDeTai` varchar(250) NOT NULL,
-  `NguoiHD` varchar(50) NOT NULL,
+  `MaGV` varchar(12) NOT NULL,
+  `TenGV` varchar(50) NOT NULL,
   `ThoiGianDK` date NOT NULL,
   `GioiHanSoLuongDK` int(11) NOT NULL,
   `SoLuongDK` int(11) NOT NULL
@@ -40,12 +60,12 @@ CREATE TABLE `detai` (
 -- Dumping data for table `detai`
 --
 
-INSERT INTO `detai` (`MaDeTai`, `TenDeTai`, `NguoiHD`, `ThoiGianDK`, `GioiHanSoLuongDK`, `SoLuongDK`) VALUES
-('001', 'Khai thác loại hình “du lịch chậm” nhằm đáp ứng nhu cầu cho người cao tuổi tại quận 1, tp.HCM', 'Nguyen Van A', '2020-12-01', 3, 0),
-('002', 'Vấn đề ô nhiễm môi trường đô thị và một số giải pháp ở khu đô thị mới', 'Nguyen Van A', '2020-12-01', 3, 0),
-('003', 'Trang phục sức thời Lý- Trần qua tư liệu khảo cổ học', 'Nguyen Van B', '2020-12-02', 3, 0),
-('004', 'Triết học về lòng biết ơn trong đạo lý “uống nước nhớ nguồn', 'Nguyen Van C', '2020-12-02', 3, 0),
-('005', 'Đánh giá tác động của dịch bệnh Covid-19 đến sự tăng trưởng nền kinh tế Việt Nam', 'Nguyen Van C', '2020-12-02', 3, 0);
+INSERT INTO `detai` (`MaDeTai`, `TenDeTai`, `MaGV`, `TenGV`, `ThoiGianDK`, `GioiHanSoLuongDK`, `SoLuongDK`) VALUES
+('001', 'Khai thác loại hình “du lịch chậm” nhằm đáp ứng nhu cầu cho người cao tuổi tại quận 1, tp.HCM', '', 'Nguyen Van A', '2021-01-01', 0, 0),
+('002', 'Vấn đề ô nhiễm môi trường đô thị và một số giải pháp ở khu đô thị mới', '', 'Nguyen Van A', '2021-01-01', 3, 0),
+('003', 'Trang phục sức thời Lý- Trần qua tư liệu khảo cổ học', '', 'Nguyen Van B', '2021-01-01', 3, 0),
+('004', 'Triết học về lòng biết ơn trong đạo lý “uống nước nhớ nguồn', '', 'Nguyen Van C', '2021-01-01', 3, 0),
+('005', 'Đánh giá tác động của dịch bệnh Covid-19 đến sự tăng trưởng nền kinh tế Việt Nam', '', 'Nguyen Van C', '2021-01-01', 3, 0);
 
 -- --------------------------------------------------------
 
@@ -62,7 +82,6 @@ CREATE TABLE `giangvien` (
   `DiaChi` varchar(50) NOT NULL,
   `SDT` varchar(10) NOT NULL,
   `Email` varchar(25) NOT NULL,
-  `ChuyenNganh` varchar(50) NOT NULL,
   `TenTK` varchar(50) NOT NULL,
   `MatKhau` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -71,21 +90,9 @@ CREATE TABLE `giangvien` (
 -- Dumping data for table `giangvien`
 --
 
-INSERT INTO `giangvien` (`MaGV`, `MaKhoa`, `TenGV`, `NgaySinh`, `GioiTinh`, `DiaChi`, `SDT`, `Email`, `ChuyenNganh`, `TenTK`, `MatKhau`) VALUES
-('GV001', 'MK001', 'Nguyen Van A', '1977-02-05', 1, 'Ba Tháng Hai, Xuân Khánh, Ninh Kiều, Cần Thơ.', '031115424', 'nguyenvana@gmail.com', 'Quản trị kinh doanh', 'TK001', 'TK01'),
-('GV002', 'MK001', 'Nguyen Van B', '1983-02-08', 1, 'Số 3 Lê Đình Lý, Thạc Gián, Thanh Khê, Đà Nẵng.', '0368825648', 'nguyenvanb@gmail.com', 'Kinh Tế Luật', 'TK002', 'TK02'),
-('GV003', 'MK002', 'Nguyen Van C', '1980-09-18', 1, 'Số 8 Tôn Thất Thuyết, Mỹ Đình, Nam Từ Liêm, Hà Nội', '0355215684', 'nguyenvanc@gmail.com', 'Kỹ thuật phần mềm', 'TK003', 'TK03');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `gvdk`
---
-
-CREATE TABLE `gvdk` (
-  `MaGV` varchar(12) NOT NULL,
-  `MaDeTai` varchar(12) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `giangvien` (`MaGV`, `MaKhoa`, `TenGV`, `NgaySinh`, `GioiTinh`, `DiaChi`, `SDT`, `Email`, `TenTK`, `MatKhau`) VALUES
+('GV002', 'MK001', 'Nguyen Van BBB', '1983-02-08', 1, 'Số 3 Lê Đình Lý, Thạc Gián, Thanh Khê, Đà Nẵng.', '0368825648', 'nguyenvanb@gmail.com', 'TK002', 'TK02'),
+('GV003', 'MK002', 'Nguyen Van C', '1980-09-18', 1, 'Số 8 Tôn Thất Thuyết, Mỹ Đình, Nam Từ Liêm, Hà Nội', '0355215684', 'nguyenvanc@gmail.com', 'TK003', 'TK03');
 
 -- --------------------------------------------------------
 
@@ -228,6 +235,12 @@ INSERT INTO `tiendo` (`MaBaoCao`, `ThoiGianBC`, `TienDo`, `NguoiBC`, `GhiChu`, `
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`EmailAdmin`);
+
+--
 -- Indexes for table `detai`
 --
 ALTER TABLE `detai`
@@ -238,12 +251,6 @@ ALTER TABLE `detai`
 --
 ALTER TABLE `giangvien`
   ADD PRIMARY KEY (`MaGV`);
-
---
--- Indexes for table `gvdk`
---
-ALTER TABLE `gvdk`
-  ADD PRIMARY KEY (`MaGV`,`MaDeTai`);
 
 --
 -- Indexes for table `khoa`
