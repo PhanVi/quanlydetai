@@ -17,7 +17,7 @@
 	 {
 		$checkSlDK=$this->de_tai_table->checkSlDK($MaDeTai);
 		if($checkSlDK->result == "0"){
-			$MaSinhVien=$this->session->userdata("username");
+			$MaSinhVien=$this->session->userdata("MaSV");
 			$checkSVDK = $this->de_tai_table->checkSVDK($MaSinhVien);
 			if($checkSVDK == 0){
 				$this->de_tai_table->insertSvdk($MaDeTai, $MaSinhVien);
