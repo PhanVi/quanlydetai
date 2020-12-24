@@ -20,4 +20,10 @@
 	{
 		$this->load->view('giangvien');
 	}
+
+    function logout()  
+    {  
+         $this->session->unset_userdata('username');  
+         redirect(base_url() . 'main/login');  
+    } 
  }

@@ -15,9 +15,10 @@
 
 </head>
 <body>
-	<h2>Thêm thông tin giảng viên</h2>
+	<h2 class="container clearfix">Thêm thông tin giảng viên</h2>
 	<a href="<?php echo site_url('giangvien/')?>"> Trở lại </a>
-    <table>
+    <table class="table table-striped">
+	
     <form action="<?php echo site_url('giangvien/form_validation')?>" method="post">
 
 		<tr>

@@ -10,7 +10,6 @@
  	}
  	public function index()
  	{
-
  		$this->load->helper('url');
  			$result = $this->giangvien_model->list_giangvien();
  			$data['result'] = $result;
@@ -76,7 +75,7 @@
            $this->form_validation->set_rules("MaGV", "Mã Giảng Viên", 'required');  
            $this->form_validation->set_rules("TenTK", "Tên Tài Khoản", 'required');  
            $this->form_validation->set_rules("MatKhau", "Mật khẩu", 'required');
-           $this->form_validation->set_message('required', '{field} Không được rỗng.');
+           $this->form_validation->set_message('required', '{field} không được rỗng.');
            $giangVien = array(
 		            'MaGV'     => $this->input->post('MaGV'),
 					'TenGV'    => $this->input->post('TenGV'),

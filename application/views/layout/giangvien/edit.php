@@ -15,9 +15,9 @@
 
 </head>
 <body>
-	<h2>Chỉnh sửa thông tin giảng viên</h2>
+	<h2 class="container clearfix">Chỉnh sửa thông tin giảng viên</h2>
 	<a href="<?php echo site_url('giangvien/')?>"> Trở lại </a>
-    <table>
+    <table class="table table-striped">
     <form action="<?php echo site_url('giangvien/update/'.$giangvien->MaGV)?>" method="post">
 
     	

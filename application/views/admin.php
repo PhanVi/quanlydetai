@@ -17,15 +17,19 @@
 <body>
     
     <h3>Bạn đang đăng nhập với quyền admin</h3>
-    <button onclick="location.href='<?php echo site_url('giangvien/');?>'">Quản lý danh sách giảng viên</button> 
+    <button type="submit" onclick="location.href='<?php echo site_url('giangvien/');?>'">Quản lý danh sách giảng viên</button> 
     <br/><br/>
-    <button onclick="location.href='<?php echo site_url('sinhvien/');?>'">Quản lý danh sách sinh viên</button>
+    <button type="submit" onclick="location.href='<?php echo site_url('sinhvien/');?>'">Quản lý danh sách sinh viên</button>
     <br/><br/>
-    <button onclick="location.href='<?php echo site_url('detai/');?>'">Quản lý danh sách đề tài</button> 
+    <button type="submit" onclick="location.href='<?php echo site_url('detai/');?>'">Quản lý danh sách đề tài</button> 
     <br/><br/>
-    <button onclick="location.href='<?php echo site_url('detaisinhvien/');?>'">Quản lý danh sách sinh viên đã đăng ký đề tài</button>
+    <button type="submit" onclick="location.href='<?php echo site_url('detaisinhvien/');?>'">Quản lý danh sách sinh viên đã đăng ký đề tài</button>
 	<br/><br/>
-
+    
+    <div>
+        <button class="btn btn-primary" type="submit" name="logout" onclick="location.href='<?php echo site_url('dashboard/');?>'"> Đăng xuất </button>
+    </div>
+	<br/><br/>	<br/><br/>	<br/><br/>
 </body>
 
 </html>

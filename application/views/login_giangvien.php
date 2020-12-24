@@ -13,23 +13,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
                         <?php echo validation_errors('<div class="alert alert-danger">' , '</div>'); ?>
-                        <form id="login-form" class="form" action="" method="post">
+                        <form id="login-form" class="form" action="<?php echo site_url('main/login_validation');?>" method="post">
                             <h3 class="text-center text-info">Đăng nhập quyền giảng viên</h3><br><br/>
                              
                               <div class="form-group">
                                   <label for="username" class="text-info">Tên đăng nhập:</label><br>
                                   <input type="text" name="username" id="username" class="form-control">
-                              </div>
-                          
-
+                              </div>                       
 
                             <div class="form-group">
                                 <label for="password" class="text-info">Mật khẩu:</label><br>
                                 <input type="text" name="password" id="password" class="form-control">
                             </div>
-
+ 
                             <div>
-                              <button class="btn btn-primary" type="button" name="login"> Đăng nhập </button>
+                              <button class="btn btn-primary" type="submit" name="login"> Đăng nhập </button>
                             </div>
 
                         </form>

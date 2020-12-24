@@ -10,14 +10,11 @@
         </tr>
     </thead>
     <tbody>
-		<?php
-		foreach($dsDeTai as $item)
-		{
-		?>
+		<?php foreach($dsDeTai as $item) { ?>
 			<tr class="tr-shadow">
 				<td><?php echo $item['MaDeTai'] ?></td>
 				<td><?php echo $item['TenDeTai'] ?></td>
-				<td><?php echo $item['NguoiHD'] ?></td>
+				<td><?php echo $item['TenGV'] ?></td>
 				<td><?php echo $item['ThoiGianDK'] ?></td>
 				<td><?php echo $item['SoLuongDK'] ?> / <?php echo $item['GioiHanSoLuongDK'] ?></td>
 				<td>

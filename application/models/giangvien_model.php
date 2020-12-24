@@ -18,8 +18,6 @@ class giangvien_model extends CI_Model
 
 	public function getByMaGV($MaGV)
 	{
-		/*$query = $this->db->query("select * from giangvien where MaGV = '$MaGV'");
-		return $query->result();*/
 
 		$this->db->from('giangvien');
 		$this->db->where('MaGV', $MaGV);
@@ -34,7 +32,8 @@ class giangvien_model extends CI_Model
 	}
 
 	public function insert_data($data)  
-      {  
-           $this->db->insert("giangvien", $data);  
-      }  
+    {  
+        $this->db->insert("giangvien", $data);  
+	}  
+
 }

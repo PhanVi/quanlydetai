@@ -16,8 +16,9 @@
 </head>
 <body>
   <button onclick="location.href='<?php echo site_url('giangvien/create');?>'">Thêm Giảng Viên</button>
+  <button onclick="location.href='<?php echo site_url('dashboard/');?>'">Đăng xuất</button>
 
-    <table border="1" style="border-collapse: collapse;">
+    <table class="table table-data2">
 
       <tr>
         <th>Mã GV</th>
@@ -28,9 +29,10 @@
         <th>Số ĐT</th>
         <th>Email</th>
         <th>Tên TK</th>
+        <th></th>
       </tr>
      <?php foreach ($result as $row) { ?>
-        <tr>
+        <tr class="tr-shadow">
           <?php 
             $href = site_url('giangvien/edit/'.$row['MaGV']);
             $url = "<a href = '".$href."'>".$row['MaGV']."</a>";
@@ -43,7 +45,13 @@
           <td><?php echo $row['SDT'] ?></td>
           <td><?php echo $row['Email'] ?></td>
           <td><?php echo $row['TenTK'] ?></td>
-          <td><a href="<?php echo site_url('giangvien/delete/'.$row['MaGV']);?>">Xóa</a></td>
+          <td>
+            <div class="table-data-feature">
+              <button class="item" data-toggle="tooltip" data-placement="top" value="Xóa đề tài">
+                <i class="fa fa-check"><a href="<?php echo site_url('giangvien/delete/'.$row['MaGV']);?>"> Xóa đề tài </a></i>
+              </button>
+            </div>
+          </td>
         </tr>
 
       <?php }?>
