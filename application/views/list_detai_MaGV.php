@@ -27,9 +27,13 @@
         </tr>
     </thead>
     <tbody>
-		<?php foreach($query as $item) { ?>
+		<?php foreach($result as $item) { ?>
 			<tr class="tr-shadow">
-                <td><?php echo $item['MaDeTai'] ?></td>
+          <?php 
+            $href = site_url('detai/view/'.$item['MaDeTai']);
+            $url = "<a href = '".$href."'>".$item['MaDeTai']."</a>";
+             echo "<td>".$url."</td>";
+          ?>
 				<td><?php echo $item['TenDeTai'] ?></td>
 				<td><?php echo $item['TenGV'] ?></td>
 				<td><?php echo $item['ThoiGianDK'] ?></td>
@@ -38,11 +42,15 @@
 			</tr>
 			<tr class="spacer"></tr>
 		<?php
-		}
+			}
 		?>
     </tbody>
 </table>
+<button class="btn btn-primary" style="margin-left: 100px" onclick="location.href='<?php echo site_url('dashboard/');?>'">Đăng xuất</button>
 
+<br/>
+<br/>
+<br/>
 
 </body>
 

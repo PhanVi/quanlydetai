@@ -15,7 +15,8 @@
 
 </head>
 <body>
-<button onclick="location.href='<?php echo site_url('detai/create');?>'">Thêm Đề Tài</button>
+  <button class="btn btn-primary" onclick="location.href='<?php echo site_url('detai/create');?>'">Thêm Đề Tài</button>
+  <button class="btn btn-primary" onclick="location.href='<?php echo site_url('dashboard/');?>'">Đăng xuất</button>
 <table class="table table-data2">
     <thead>
         <tr>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title Page-->
-    <title>Quản lý Giảng Viên</title>
+    <title>Quản lý Sinh Viên</title>
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -15,15 +15,15 @@
 
 </head>
 <body>
-  <button class="btn btn-primary" onclick="location.href='<?php echo site_url('giangvien/create');?>'">Thêm Giảng Viên</button>
+  <button class="btn btn-primary" onclick="location.href='<?php echo site_url('sinhvien/create');?>'">Thêm Sinh Viên</button>
   <button class="btn btn-primary" onclick="location.href='<?php echo site_url('dashboard/');?>'">Đăng xuất</button>
 
     <table class="table table-data2">
 
       <tr>
-        <th>Mã GV</th>
-        <th>Tên GV</th>
-        <th>Mã khoa</th>
+        <th>Mã SV</th>
+        <th>Tên SV</th>
+        <th>Mã lớp</th>
         <th>Ngày sinh</th>
         <th>Địa chỉ</th>
         <th>Số ĐT</th>
@@ -33,20 +33,20 @@
      <?php foreach ($result as $row) { ?>
         <tr class="tr-shadow">
           <?php 
-            $href = site_url('giangvien/edit/'.$row['MaGV']);
-            $url = "<a href = '".$href."'>".$row['MaGV']."</a>";
+            $href = site_url('sinhvien/edit/'.$row['MaSV']);
+            $url = "<a href = '".$href."'>".$row['MaSV']."</a>";
              echo "<td>".$url."</td>";
           ?>
-          <td><?php echo $row['TenGV'] ?></td>
-          <td><?php echo $row['MaKhoa'] ?></td>
+          <td><?php echo $row['TenSV'] ?></td>
+          <td><?php echo $row['MaLop'] ?></td>
           <td><?php echo $row['NgaySinh'] ?></td>
           <td><?php echo $row['DiaChi'] ?></td>
           <td><?php echo $row['SDT'] ?></td>
           <td><?php echo $row['Email'] ?></td>
           <td>
             <div class="table-data-feature">
-              <button class="item" data-toggle="tooltip" data-placement="top" value="Xóa ">
-                <i class="fa fa-check"><a href="<?php echo site_url('giangvien/delete/'.$row['MaGV']);?>"> Xóa</a></i>
+              <button class="item" data-toggle="tooltip" data-placement="top" value="Xóa">
+                <i class="fa fa-check"><a href="<?php echo site_url('sinhvien/delete/'.$row['MaSV']);?>"> Xóa</a></i>
               </button>
             </div>
           </td>

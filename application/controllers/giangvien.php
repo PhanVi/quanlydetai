@@ -72,8 +72,7 @@
       {  
            //echo 'OK';  
            $this->load->library('form_validation');  
-           $this->form_validation->set_rules("MaGV", "Mã Giảng Viên", 'required');  
-           $this->form_validation->set_rules("TenTK", "Tên Tài Khoản", 'required');  
+           $this->form_validation->set_rules("MaGV", "Mã Giảng Viên", 'required');   
            $this->form_validation->set_rules("MatKhau", "Mật khẩu", 'required');
            $this->form_validation->set_message('required', '{field} không được rỗng.');
            $giangVien = array(
@@ -84,7 +83,6 @@
 					'SDT'      => $this->input->post('SDT'),
 					'DiaChi'   => $this->input->post('DiaChi'),
 					'Email'    => $this->input->post('Email'),
-					'TenTK'    => $this->input->post('TenTK'),
 					'MatKhau'  => $this->input->post('MatKhau')
 				); 
            if($this->form_validation->run())  
@@ -105,7 +103,6 @@
 				$data['giangvien']->SDT = $giangVien['SDT'];
 				$data['giangvien']->DiaChi = $giangVien['DiaChi'];
 				$data['giangvien']->Email = $giangVien['Email'];
-				$data['giangvien']->TenTK = $giangVien['TenTK'];
 				$data['giangvien']->MatKhau = $giangVien['MatKhau'];
 				echo validation_errors();
 	           $this->load->view("layout/giangvien/create", $data);  

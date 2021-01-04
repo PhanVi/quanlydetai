@@ -60,12 +60,6 @@
 		</tr>
 
 		<tr>
-		<td>Tên tài khoản:
-		<input type="text" name="TenTK" class="form-control" value="<?php echo $giangvien->TenTK ?>"/>
-		</td>
-		</tr>
-
-		<tr>
 		<td>Mật khẩu:
 		<input type="text" name="MatKhau" class="form-control" value="<?php echo $giangvien->MatKhau ?>"/>
 		</td>

@@ -8,7 +8,7 @@
 
      function can_login_giangvien($username, $password)  
      {  
-          $this->db->where('TenTK', $username);  
+          $this->db->where('MaGV', $username);  
           $this->db->where('MatKhau', $password);  
           $query = $this->db->get('giangvien');  
           //SELECT * FROM users WHERE username = '$username' AND password = '$password'  
@@ -39,7 +39,7 @@
       } 
      function can_login_sinhvien($username, $password)  
      {  
-          $this->db->where('TenTK', $username);  
+          $this->db->where('MaSV', $username);  
           $this->db->where('MatKhau', $password);  
           $query = $this->db->get('sinhvien');  
           //SELECT * FROM users WHERE username = '$username' AND password = '$password'  

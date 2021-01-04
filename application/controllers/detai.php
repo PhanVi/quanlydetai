@@ -26,14 +26,21 @@
 		 $this->load->view('layout/detai/edit', $data);
 	 }
 
+	 public function view($MaDeTai)
+	 {
+		$this->load->helper('url');
+		$data['detai'] = $this->detai_model->getByMaDeTai($MaDeTai);
+		$this->load->view('layout/detai/view', $data);
+	}
+
 	 public function update($MaDeTai)
 	 {
 		 $data = array(
-			 'TenDeTai'    		  => $this->input->post('TenDeTai'),
-			 'TenGV'       		  => $this->input->post('TenGV'),
-			 'ThoiGianDK'  		  => $this->input->post('ThoiGianDK'),
-			 'SoLuongDK'   		  => $this->input->post('SoLuongDK'),
-			 'GioiHanSoLuongDK'   => $this->input->post('GioiHanSoLuongDK')
+			'TenDeTai'    		  => $this->input->post('TenDeTai'),
+			'TenGV'       		  => $this->input->post('TenGV'),
+			'ThoiGianDK'  		  => $this->input->post('ThoiGianDK'),
+			'SoLuongDK'   		  => $this->input->post('SoLuongDK'),
+			'GioiHanSoLuongDK'   => $this->input->post('GioiHanSoLuongDK')
 			 
 		 );
 		 $this->db->where('MaDeTai', $MaDeTai);
@@ -61,7 +68,7 @@
 
 	public function form_validation()  
     {    
-		$data['TenGV'] = $this->detai_model->getTenGV();
+		//$data['TenGV'] = $this->detai_model->getTenGV();
 		$this->load->library('form_validation');  
 		$this->form_validation->set_rules("MaDeTai", "Mã Đề Tài", 'required');  ;
 		$this->form_validation->set_message('required', '{field} Không được rỗng.');
@@ -94,11 +101,5 @@
 		}            
 
 	}  
-	  
-	public function get_dropdown(){
-		$data['tenGV_list'] = $this->giangvien_model->getTenGV_pulldown();
-
-		$this->load->view('detai', $data);
-	}
 	
 }

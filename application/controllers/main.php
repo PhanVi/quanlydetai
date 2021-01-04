@@ -89,16 +89,16 @@
               if($this->main_model->can_login_giangvien($username, $password))  
               {  
                    $session_data = array(  
-                        'username'     =>     $username  
+                        'username'     =>     $username 
                    );  
                    $this->session->set_userdata($session_data);  
-                   redirect(site_url('de_tai/danh_sach'));  
+                   redirect(site_url('u_giangvien/loadListDeTai'));  
               }  
 
               elseif ($this->main_model->can_login_admin($username, $password))  
               {
                     $session_data = array(  
-                         'username'     =>     $username  
+                         'username'     =>     $username 
                     );  
                     $this->session->set_userdata($session_data);  
                     redirect(site_url('admin/'));
@@ -107,12 +107,12 @@
               elseif ($this->main_model->can_login_sinhvien($username, $password))  
               {
                     $session_data = array(  
-                         'username'     =>     $username  
+                         'username'     =>     $username 
                     );  
                     $this->session->set_userdata($session_data);  
-                    redirect(site_url('de_tai/danh_sach'));
+                    redirect(site_url('de_tai/danhsach'));
               }
-              
+
               else  
               {  
                    $this->session->set_flashdata('error', 'Invalid Username and Password'); 
