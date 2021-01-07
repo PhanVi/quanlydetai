@@ -29,62 +29,49 @@
     <link href="<?php echo base_url() ?>public/css/theme.css" rel="stylesheet" media="all">
 
 </head>
-<body class="animsition">
-<div class="container-fluid">
-  <div class="row">
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="#section1">Danh sách đề tài</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section2">Thông tin sinh viên</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section3">Đề tài đã đăng ký</a>
-        </li>
-        
-      </ul>
-	</div>
+<div id="section2" class="main-content">  
+	<h3> Thông tin sinh viên</h3>
+    <form action="" method="post">
+
+		<div class="form-row">
+			<div class="col">
+				<p>Mã sinh viên:</p>
+				<input readonly type="text" name="MaSV" class="form-control" value="<?php echo $chiTietSV->MaSV ?>">
+			</div>
+			<div class="col">
+				<p>Tên sinh viên:</p>
+				<input readonly type="text" name="TenSV" class="form-control" value="<?php echo $chiTietSV->TenSV ?>">
+			</div>
+		</div>
+		
+		<div class="form-row">
+			<div class="col">
+				<p>Mã lớp:</p>
+				<input readonly type="text" name="MaLop" class="form-control" value="<?php echo $chiTietSV->MaLop ?>">
+			</div>
+			<div class="col">
+				<p>Ngày sinh:</p>
+				<input  readonly type="text" name="NgaySinh" class="form-control" value="<?php echo $chiTietSV->NgaySinh ?>">
+			</div>
+		</div>	
+		
+		<div class="form-row">
+			<div class="col">
+				<p>Địa chỉ:</p>
+				<input readonly  type="text" name="DiaChi" class="form-control" value="<?php echo $chiTietSV->DiaChi ?>">
+			</div>
+			<div class="col">
+				<p>SDT:</p>
+				<input readonly  type="text" name="SDT" class="form-control" value="<?php echo $chiTietSV->SDT ?>">
+			</div>
+			<div class="col">
+				<p>Email:</p>
+				<input readonly  type="text" name="Email" class="form-control" value="<?php echo $chiTietSV->Email ?>">
+			</div>			
+		</div>			
+		
+    </form>
 </div>
-<div id="section1" class="main-content">    
-<h3>Danh sách đề tài</h3>
-<table class="table table-data2">
-    <thead>
-        <tr>
-            <th>Mã</th>
-            <th>Tên đề tài</th>
-            <th>Người hướng dẫn</th>
-            <th>Thời gian kết thúc</th>
-            <th>số lượng đã đăng ký</th>
-            <th>Đăng ký</th>
-        </tr>
-    </thead>
-    <tbody>
-		<?php foreach($dsDeTai as $item) { ?>
-			<tr class="tr-shadow">
-				<td><?php echo $item['MaDeTai'] ?></td>
-				<td style="width: 35%;"><?php echo $item['TenDeTai'] ?></td>
-				<td><?php echo $item['TenGV'] ?></td>
-				<td><?php echo $item['ThoiGianDK'] ?></td>
-				<td><?php echo $item['SoLuongDK'] ?> / <?php echo $item['GioiHanSoLuongDK'] ?></td>
-				<td>
-					<div class="table-data-feature" >
-						<a class="item" data-toggle="tooltip" data-placement="top" title="Đăng ký" href="<?php echo site_url('de_tai/dangKyDeTai/'.$item['MaDeTai']);?>" >
-							<i class="fa fa-check"></i>
-						</a>
-					</div>
-				</td>
-			</tr>
-			<tr class="spacer"></tr>
-		<?php
-		}
-		?>
-
-    </tbody>
-</table>
-</div>
-
-
 <!-- Jquery JS-->
 <script src="<?php echo base_url() ?>public/vendor/jquery-3.2.1.min.js"></script>
 <!-- Bootstrap JS-->
@@ -108,7 +95,9 @@
 
 <!-- Main JS-->
 <script src="<?php echo base_url() ?>public/js/main.js"></script>
-
+</br>
+</br>
+</br>
 </body>
 
 </html>

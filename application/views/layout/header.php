@@ -4,12 +4,13 @@
 
 <article>
   <header>
-  <h1 id="logo"> <img src="../images/logo.png"> </h1>
-    <h3 class="container clearfix">Quản lý đăng ký đề tài nghiên cứu khoa học của trường đại</h3></br>
-    <nav>
-        <a href=""></a>
+    <div class="col">
+      <h1> <img src="../../images/logo.png" width=auto height=100px>  </h1>
+    </div>    
+    <div class="col">
+      <h3 class="font-weight-light" style="text-align: center">Quản lý đăng ký đề tài </br> nghiên cứu khoa học của trường đại học</h3></br>
+    </div>
 
-    </nav>
     <style>
       .header {
         float: left;
@@ -19,6 +20,7 @@
         padding: 14px 16px;
         text-decoration: none;
       }
+
     </style>
 
   </header>

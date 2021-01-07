@@ -29,62 +29,34 @@
     <link href="<?php echo base_url() ?>public/css/theme.css" rel="stylesheet" media="all">
 
 </head>
-<body class="animsition">
-<div class="container-fluid">
-  <div class="row">
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="#section1">Danh sách đề tài</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section2">Thông tin sinh viên</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section3">Đề tài đã đăng ký</a>
-        </li>
-        
-      </ul>
-	</div>
+
+
+<div id="section3" class="main-content">  
+<h3 class="heading full"> Đề tài sinh viên đã đăng ký</h3>
+<form action="" method="post">
+    <div class="form-group">
+        <div class="col">
+            <p>Tên đề tài: </p>
+            <input readonly type="text" name="TenDeTai" class="form-control" value="<?php echo $chiTietDeTai->TenDeTai ?>">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col">
+            <p>Tên giảng viên theo dõi đề tài:</p>
+            <input readonly type="text" name="TenGV" class="form-control" value="<?php echo $chiTietDeTai->TenGV ?>">
+        </div>    
+        <div class="col">
+            <p>Hạn đăng ký đề tài:</p>
+            <input readonly type="text" name="ThoiGianDK" class="form-control" value="<?php echo $chiTietDeTai->ThoiGianDK ?>">
+        </div>
+
+    </div>	
+	
+
+</form>
+
 </div>
-<div id="section1" class="main-content">    
-<h3>Danh sách đề tài</h3>
-<table class="table table-data2">
-    <thead>
-        <tr>
-            <th>Mã</th>
-            <th>Tên đề tài</th>
-            <th>Người hướng dẫn</th>
-            <th>Thời gian kết thúc</th>
-            <th>số lượng đã đăng ký</th>
-            <th>Đăng ký</th>
-        </tr>
-    </thead>
-    <tbody>
-		<?php foreach($dsDeTai as $item) { ?>
-			<tr class="tr-shadow">
-				<td><?php echo $item['MaDeTai'] ?></td>
-				<td style="width: 35%;"><?php echo $item['TenDeTai'] ?></td>
-				<td><?php echo $item['TenGV'] ?></td>
-				<td><?php echo $item['ThoiGianDK'] ?></td>
-				<td><?php echo $item['SoLuongDK'] ?> / <?php echo $item['GioiHanSoLuongDK'] ?></td>
-				<td>
-					<div class="table-data-feature" >
-						<a class="item" data-toggle="tooltip" data-placement="top" title="Đăng ký" href="<?php echo site_url('de_tai/dangKyDeTai/'.$item['MaDeTai']);?>" >
-							<i class="fa fa-check"></i>
-						</a>
-					</div>
-				</td>
-			</tr>
-			<tr class="spacer"></tr>
-		<?php
-		}
-		?>
-
-    </tbody>
-</table>
-</div>
-
-
 <!-- Jquery JS-->
 <script src="<?php echo base_url() ?>public/vendor/jquery-3.2.1.min.js"></script>
 <!-- Bootstrap JS-->
@@ -108,7 +80,10 @@
 
 <!-- Main JS-->
 <script src="<?php echo base_url() ?>public/js/main.js"></script>
-
+</br>
+</br>
+</br>
+<button class="btn btn-primary" style="margin-left: 150px" onclick="location.href='<?php echo site_url('dashboard/');?>'">Đăng xuất</button>
 </body>
 
 </html>

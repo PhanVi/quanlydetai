@@ -37,5 +37,17 @@ class detai_model extends CI_Model
     {  
         $this->db->insert("detai", $data);  
 	}
+	
+	public function getListSinhVienDKDeTai($MaDeTai)  
+    {  
+		$query=$this->db->query('SELECT * FROM svdk WHERE MaDeTai = ?', array($MaDeTai));
+		return $query->result_array();
+	}
 
+	public function getSinhVien($MaSV)  
+    {  
+		$query=$this->db->query('SELECT * FROM sinhvien WHERE MaSV = ?', array($MaSV));
+		return $query->row();
+	}
+	
 }

@@ -30,6 +30,12 @@
 		</tr>
 
 		<tr>
+		<td>Mã khoa:
+		<input type="text" name="MaKhoa" class="form-control" value="<?php echo $giangvien->MaKhoa ?>"/>
+		</td>
+		</tr>
+
+		<tr>
 		<td>Ngày sinh:
 		<input type="text" name="NgaySinh" class="form-control" value="<?php echo $giangvien->NgaySinh ?>"/>
 		</td>

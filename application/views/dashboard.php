@@ -20,15 +20,15 @@
 <body>
 
 <div class="container-fluid">
-  <h3 class="container pt-3">Bạn muốn đăng nhập: </h3>
-  </br>
-  </br>
   </br>
   </br>
   <div class="row">
     <div class="col" style="background-color:none; text-align:center"><a class="btn btn-info" onclick="location.href='<?php echo site_url('main/login_giangvien');?>'">Giảng viên</a></div>
     <div class="col" style="background-color:none; text-align:center"><a class="btn btn-info" onclick="location.href='<?php echo site_url('main/login_sinhvien');?>'">Sinh viên</a></div>
     <div class="col" style="background-color:none; text-align:center" ><a class="btn btn-info" onclick="location.href='<?php echo site_url('main/login_admin');?>'">Admin</a> </div>
+  </br>
+  </br>
+  </br>
   </br>
   </br>
   </br>

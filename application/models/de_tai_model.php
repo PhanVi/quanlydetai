@@ -24,7 +24,18 @@
 		$query=$this->db->query('SELECT * FROM svdk WHERE MaSV = ?', array($MaSinhVien));
 		return $query->num_rows();
 	}
-
-
+	public function getDetailsSV($MaSinhVien){
+		$query=$this->db->query('SELECT * FROM sinhvien WHERE MaSV = ?', array($MaSinhVien));
+		return $query->row();
+	}
+	public function getDeTaiSVDaDK($MaSinhVien){
+		$query=$this->db->query('SELECT * FROM svdk WHERE MaSV = ?', array($MaSinhVien));
+		return $query->row();
+	}
+	public function getChiTietDeTai($MaDeTai){
+		$query=$this->db->query('SELECT * FROM detai WHERE MaDeTai = ?', array($MaDeTai));
+		return $query->row();
+	}	
+	
  }
  ?>

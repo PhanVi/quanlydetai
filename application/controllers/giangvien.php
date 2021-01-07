@@ -35,6 +35,7 @@
 		//$MaGV = $this->input->post('MaGV');
 		$data = array(
 			'TenGV'    => $this->input->post('TenGV'),
+			'MaKhoa'   => $this->input->post('MaKhoa'),
 			'NgaySinh' => $this->input->post('NgaySinh'),
 			'GioiTinh' => $this->input->post('GioiTinh'),
 			'SDT'      => $this->input->post('SDT'),
@@ -57,6 +58,7 @@
 		$data['giangvien'] = new stdClass;
 		$data['giangvien']->MaGV = "";
 		$data['giangvien']->TenGV = "";
+		$data['giangvien']->MaKhoa = "";
 		$data['giangvien']->NgaySinh = "";
 		$data['giangvien']->GioiTinh = "";
 		$data['giangvien']->SDT = "";
@@ -78,6 +80,7 @@
            $giangVien = array(
 		            'MaGV'     => $this->input->post('MaGV'),
 					'TenGV'    => $this->input->post('TenGV'),
+					'MaKhoa'   => $this->input->post('MaKhoa'),
 					'NgaySinh' => $this->input->post('NgaySinh'),
 					'GioiTinh' => $this->input->post('GioiTinh'),
 					'SDT'      => $this->input->post('SDT'),
@@ -98,6 +101,7 @@
         		$data['giangvien'] = new stdClass;
 				$data['giangvien']->MaGV = $giangVien['MaGV'];
 				$data['giangvien']->TenGV = $giangVien['TenGV'];
+				$data['giangvien']->MaKhoa = $giangVien['MaKhoa'];
 				$data['giangvien']->NgaySinh = $giangVien['NgaySinh'];
 				$data['giangvien']->GioiTinh = $giangVien['GioiTinh'];
 				$data['giangvien']->SDT = $giangVien['SDT'];

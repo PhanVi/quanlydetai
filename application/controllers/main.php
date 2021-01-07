@@ -126,16 +126,4 @@
               $this->login_giangvien();  
          }  
     }  
-    public function enter(){  
-         if($this->session->userdata('username') != '')  
-         {  
-              echo '<h2>Welcome - '.$this->session->userdata('username').'</h2>';  
-              echo '<label><a href="'.base_url().'main/logout">Logout</a></label>';  
-         }  
-         else  
-         {  
-              redirect(site_url('giangvien/'));  
-         }  
-    }  
- 
  }  

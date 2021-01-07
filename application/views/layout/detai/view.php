@@ -13,6 +13,12 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+<style>
+h2 {
+    text-align: center;
+}
+</style>
+
 </head>
 <body>
 	<h2 class="container clearfix">Xem chi tiết đề tài</h2>
@@ -46,20 +52,6 @@
         </tr> 
     </form>
     </table>
-
-    <hr style="height:2px;border-width:0;color:gray;background-color:blue">
-    <h3 class="container clearfix">Danh sách sinh viên đã đăng ký đề tài này</h2>
-    <div>
-    <?php
-        
-        //foreach($result as $row){
-        //    $this->load->view($row);
-        //}
-    
-    ?>
-    </div>
-
-
 
 </body>
 

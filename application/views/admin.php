@@ -20,7 +20,7 @@
 <body>
 
 <div class="container-fluid">
-  <h3 class="container pt-3">Bạn đang đăng nhập với quyền admin </h3>
+  <h3 class="container">Bạn đang đăng nhập với quyền admin </h3>
   </br>
   </br>
   </br>
@@ -29,7 +29,6 @@
     <div class="col" style="background-color:none; text-align:center"><a class="btn btn-info" onclick="location.href='<?php echo site_url('giangvien/');?>'">Quản lý danh sách giảng viên</a> </div>
     <div class="col" style="background-color:none; text-align:center"><a class="btn btn-info" onclick="location.href='<?php echo site_url('sinhvien/');?>'">Quản lý danh sách sinh viên</a></div>
     <div class="col" style="background-color:none; text-align:center"><a class="btn btn-info" onclick="location.href='<?php echo site_url('detai/');?>'">Quản lý danh sách đề tài</a></div>
-    <div class="col" style="background-color:none; text-align:center"><a class="btn btn-info" onclick="location.href='<?php echo site_url('detaisinhvien/');?>'">Quản lý danh sách SV đã đăng ký đề tài</a></div>
     </br>
     </br>
     

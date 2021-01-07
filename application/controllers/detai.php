@@ -28,9 +28,24 @@
 
 	 public function view($MaDeTai)
 	 {
-		$this->load->helper('url');
+
 		$data['detai'] = $this->detai_model->getByMaDeTai($MaDeTai);
+		//list sv đã đk đề tài này
+		$listSinhVien = $this->detai_model->getListSinhVienDKDeTai($MaDeTai);
+		$data['listSinhVien'] = $listSinhVien;
+		foreach($listSinhVien as $item){
+			$MaSV =  $item['MaSV'];
+			$sinhVien = $this->detai_model->getSinhVien($MaSV);
+			$data['sinhVien'] = $sinhVien;
+		}
+
+		if($listSinhVien == null){
+			echo "<script language='javascript'>alert('Đề tài này chưa được sinh viên đăng ký!'); </script>"; 
+		}
+		
 		$this->load->view('layout/detai/view', $data);
+		$this->load->view('layout/detai/ds_svDkDeTai', $data);
+		
 	}
 
 	 public function update($MaDeTai)
@@ -40,7 +55,7 @@
 			'TenGV'       		  => $this->input->post('TenGV'),
 			'ThoiGianDK'  		  => $this->input->post('ThoiGianDK'),
 			'SoLuongDK'   		  => $this->input->post('SoLuongDK'),
-			'GioiHanSoLuongDK'   => $this->input->post('GioiHanSoLuongDK')
+			'GioiHanSoLuongDK'    => $this->input->post('GioiHanSoLuongDK')
 			 
 		 );
 		 $this->db->where('MaDeTai', $MaDeTai);

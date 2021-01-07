@@ -9,9 +9,29 @@
 	{
 		$dsDeTai=$this->de_tai_model->listDeTai();
 		$data['dsDeTai']=$dsDeTai;
-		$data['path']=array('de_tai/v_doc_dsDeTai');
-		$this->load->view('layoutDeTai', $data );
+		$MaSV=$this->session->userdata("username");
+		$chiTietSV = $this->de_tai_model->getDetailsSV($MaSV);
+		$data['chiTietSV'] = $chiTietSV;
+		$deTaiDaDK = $this->de_tai_model->getDeTaiSVDaDK($MaSV);
 
+		$MaDeTai = $deTaiDaDK->MaDeTai;
+
+		$chiTietDeTai = $this->de_tai_model->getChiTietDeTai($MaDeTai);
+		$data['chiTietDeTai'] = $chiTietDeTai;
+		$this->load->view('de_tai/v_doc_dsDeTai', $data );
+		$this->load->view('de_tai/v_doc_chiTiet_SinhVien', $data );
+		
+		if($deTaiDaDK == null){
+			echo "<script language='javascript'>alert('Sinh viên chưa đăng ký đề tài!'); </script>"; 
+		} else {
+			$this->load->view('de_tai/v_doc_deTai_daDK', $data );
+		}
+	}
+
+	public function getChiTietSinhVien($MaSV){
+		$sinhVien=$this->de_tai_model->getDetailsSV($MaSV);
+		$data['sinhVien']=$sinhVien;
+		$this->load->view('de_tai/view', $data );
 	}
 	public function dangKyDeTai($MaDeTai)
 	{
