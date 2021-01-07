@@ -21,7 +21,7 @@
     <form action="<?php echo site_url('giangvien/update/'.$giangvien->MaGV)?>" method="post">
 
     	
-		<input type="hidden" name="MaGV" value="<?php echo $giangvien->MaGV ?>">
+		<input readonly type="hidden" name="MaGV" value="<?php echo $giangvien->MaGV ?>">
 
 		<tr>
 		<td>Tên giảng viên:

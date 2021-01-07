@@ -21,7 +21,7 @@
     <form action="<?php echo site_url('detai/update/'.$detai->MaDeTai)?>" method="post">
 
     	
-		<input type="hidden" name="MaDeTai" value="<?php echo $detai->MaDeTai ?>">
+		<input readonly type="hidden" name="MaDeTai" value="<?php echo $detai->MaDeTai ?>">
 
 		<tr>
 		<td>Tên đề tài:

@@ -19,11 +19,11 @@
 	<a href="<?php echo site_url('sinhvien/')?>"> Trở lại </a>
     <table class="table table-striped">
 	
-    <form action="<?php echo site_url('sinhvien/form_validation')?>" method="post">
+    <form action="<?php echo site_url('sinhvien/update/'.$sinhvien->MaSV)?>" method="post">
 
 		<tr>
 		<td>Mã sinh viên:
-		<input type="text" name="MaSV" class="form-control" value="<?php echo $sinhvien->MaSV ?>">
+		<input readonly type="text" name="MaSV" class="form-control" value="<?php echo $sinhvien->MaSV ?>">
 		</td>
 		</tr>
 

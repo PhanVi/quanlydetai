@@ -39,7 +39,7 @@ h3,h6 {
 			<tr class="tr-shadow" style="text-align:center;">
                 <?php 
                     // $href = site_url('sinhvien/view/'.$row['MaSV']);
-                    $href = site_url('de_tai/view/'.$row['MaSV']);
+                    $href = site_url('sinhvien/edit/'.$row['MaSV']);
                     $url = "<a href = '".$href."'>".$row['MaSV']."</a>";
                     echo "<td>".$url."</td>";
                 ?>

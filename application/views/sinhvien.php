@@ -16,7 +16,10 @@
 </head>
 <body>
   <button class="btn btn-primary" onclick="location.href='<?php echo site_url('sinhvien/create');?>'">Thêm Sinh Viên</button>
-  
+  </br>
+    </br>
+    </br>
+    </br>
     <table class="table table-data2">
 
       <tr>
@@ -53,7 +56,15 @@
 
       <?php }?>
     </table>
+
+    </br>
+    </br>
+    </br>
+    </br>
     <button class="btn btn-primary" onclick="location.href='<?php echo site_url('dashboard/');?>'">Đăng xuất</button>
 </body>
-
+</br>
+    </br>
+    </br>
+    </br>
 </html>

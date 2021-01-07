@@ -16,7 +16,7 @@
 </head>
 <body>
   <button class="btn btn-primary" onclick="location.href='<?php echo site_url('giangvien/create');?>'">Thêm Giảng Viên</button>
-  <button class="btn btn-primary" onclick="location.href='<?php echo site_url('dashboard/');?>'">Đăng xuất</button>
+  
 
     <table class="table table-data2">
 
@@ -54,7 +54,7 @@
 
       <?php }?>
     </table>
-
+    <button class="btn btn-primary" onclick="location.href='<?php echo site_url('dashboard/');?>'">Đăng xuất</button>
 </body>
 
 </html>

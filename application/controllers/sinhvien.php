@@ -28,7 +28,7 @@
      {
          $this->load->model("sinhvien_model");  
          $data = array(
-             'TenSV'    => $this->input->post('TenGV'),
+             'TenSV'    => $this->input->post('TenSV'),
              'MaLop'    => $this->input->post('MaLop'),
              'NgaySinh' => $this->input->post('NgaySinh'),
              'SDT'      => $this->input->post('SDT'),
@@ -37,12 +37,6 @@
          );
          $this->db->where('MaSV', $MaSV);
          $this->db->update('sinhvien', $data);
-         redirect('sinhvien');
-     }
- 
-     public function delete($MaSV)
-     {
-         $this->sinhvien_model->delete_id($MaSV);
          redirect('sinhvien');
      }
  
@@ -99,6 +93,11 @@
                  echo validation_errors();
                 $this->load->view("layout/sinhvien/create", $data);  
              }            
- 
-       }  
+    }  
+        
+    public function delete($MaSV)
+    {
+        $this->sinhvien_model->delete_id($MaSV);
+        redirect('sinhvien');
+    }
 }
